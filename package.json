@@ -1,0 +1,13 @@
+{
+  "name": "automatic-winner",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js & browser-sync start -s . -f \"**/*.css, **/*.html\" -w --no-notify"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.7"
+  }
+}
