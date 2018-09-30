@@ -1,0 +1,141 @@
+:root {
+  --primary: 19, 147, 246;
+  --danger: 255, 77, 77;
+  --dark: 64, 64, 64;
+  --light: 251, 251, 251;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: rgb(var(--light));
+  color: rgb(var(--dark));
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 2em 0;
+}
+
+.container__step {
+  background: #fff;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 500px;
+  padding: 2em;
+  display: none;
+}
+
+.container__step--active {
+  display: block;
+}
+
+.container__title {
+  text-align: center;
+  margin: 0 0 0.5em 0;
+}
+
+.container__subtitle {
+  text-align: center;
+  margin: 0 0 2em 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__field {
+  flex: 1 1 100%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form__label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  height: 2.25em;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: none;
+  outline: 0;
+  border-radius: 4px;
+  padding: .4em .6em;
+  color: rgb(var(--dark));
+  background: rgb(var(--light));
+  border: 1px solid rgb(var(--primary));
+}
+
+.form__input--invalid {
+  border-color: rgba(var(--danger), 0.8);
+}
+
+textarea.form__input {
+  height: auto;
+  resize: vertical;
+}
+
+.form__input:hover {
+  background: #fff;
+}
+
+.form__input:active,
+.form__input:focus {
+  box-shadow: 0 0 0 0.125em rgba(var(--primary), 0.3);
+  background: #fff;
+}
+
+.form__input.form__input--invalid:active,
+.form__input.form__input--invalid:focus {
+  box-shadow: 0 0 0 0.125em rgba(var(--danger), 0.3);
+}
+
+.form__message {
+  font-size: 0.8em;
+  color: rgba(var(--dark), 0.9);
+}
+
+.form__message--invalid {
+  color: rgba(var(--danger), 0.8);
+}
+
+.form__button {
+  width: 100%;
+  display: block;
+  height: 3em;
+  background: rgba(var(--primary), 0.9);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.form__button:hover,
+.form__button:active,
+.form__button:focus {
+  background: rgba(var(--primary), 1);
+  box-shadow: 0 0 0 0.125em rgba(var(--primary), 0.3);
+}

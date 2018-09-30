@@ -1,11 +1,15 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require("express");
+const cors = require("cors");
 
-const fields = require('./fields.json')
+const app = express();
+const port = 3000;
 
-app.listen(port, () => console.log(`Server listening on port ${port}!`, `http://localhost:${port}`))
+const fields = require("./fields.json");
 
-app.get('/', (req, res) => res.send('Hello there'))
+app.use(cors());
+app.listen(port, () =>
+  console.log(`Server listening on port ${port}!`, `http://localhost:${port}`)
+);
 
-app.get('/fields', (req, res) => res.json(fields))
+app.get("/", (req, res) => res.send("Hello there"));
+app.get("/fields", (req, res) => res.json(fields));

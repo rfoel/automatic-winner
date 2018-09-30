@@ -1,13 +1,19 @@
 {
   "name": "automatic-winner",
   "version": "1.0.0",
+  "browser": "demo/ninjaForm.js",
   "scripts": {
-    "start": "node server.js & browser-sync start -s . -f \"**/*.css, **/*.html\" -w --no-notify"
+    "start": "node server.js & browser-sync start -s ./demo -f \"*.html, *.css, *.js\" -w --no-notify",
+    "build": "rollup -c",
+    "test": "jest"
   },
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.3"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.7"
+    "browser-sync": "^2.24.7",
+    "jest": "^23.6.0",
+    "rollup": "^0.66.2"
   }
 }
